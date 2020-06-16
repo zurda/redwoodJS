@@ -6,29 +6,31 @@ const BlogLayout = ({ children }) => {
 
   return (
     <>
-      <div style={{ minHeight: 'calc(100vh - 80px)' }}>
-        <h1>
-          <Link to={routes.home()}>Zurda RW</Link>
-        </h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to={routes.about()}>About</Link>
-            </li>
-            <li>
-              <Link to={routes.contact()}>Contact</Link>
-            </li>
-            <li>
-              <a href="#" onClick={isAuthenticated ? logOut : logIn}>
-                {isAuthenticated ? 'Log Out' : 'Log In'}
-              </a>
-            </li>
-            {isAuthenticated && <li>{currentUser.email}</li>}
-          </ul>
-        </nav>
-        {children}
+      <div className="main">
+        <div className="header">
+          <h1>
+            <Link to={routes.home()}>Zurda RW</Link>
+          </h1>
+          <nav>
+            <ul>
+              <li>
+                <Link to={routes.about()}>About</Link>
+              </li>
+              <li>
+                <Link to={routes.contact()}>Contact</Link>
+              </li>
+              <li>
+                <a href="#" onClick={isAuthenticated ? logOut : logIn}>
+                  {isAuthenticated ? 'Log Out' : 'Log In'}
+                </a>
+              </li>
+              {isAuthenticated && <li>{currentUser.email}</li>}
+            </ul>
+          </nav>
+        </div>
+        <div className="content">{children}</div>
       </div>
-      <footer style={{ textAlign: 'center' }}>
+      <footer>
         <p>
           Built with RedwoodJs
           <br />
