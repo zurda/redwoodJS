@@ -20,6 +20,9 @@ const BlogLayout = ({ children }) => {
                 <Link to={routes.contact()}>Contact</Link>
               </li>
               <li>
+                <Link to={routes.weather()}>Weather</Link>
+              </li>
+              <li>
                 <a href="#" onClick={isAuthenticated ? logOut : logIn}>
                   {isAuthenticated ? 'Log Out' : 'Log In'}
                 </a>
