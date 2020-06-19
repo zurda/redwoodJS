@@ -13,10 +13,11 @@ export const Empty = () => <div>Empty</div>
 
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
-export const Success = ({ movie }) => {
+export const Success = ({ movie, setMovieTitle }) => {
+  setMovieTitle(movie.title)
   return (
     <section>
-      <h1>{movie.title}</h1>
+      <h1 className="movieTitle">{movie.title}</h1>
       <h2
         style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
       >

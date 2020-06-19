@@ -24,6 +24,14 @@ const Routes = () => {
         />
         <Route path="/posts/{id:Int}" page={PostPage} name="post" />
         <Route path="/posts" page={PostsPage} name="posts" />
+        <Route path="/reviews/new" page={NewReviewPage} name="newReview" />
+        <Route
+          path="/reviews/{id:Int}/edit"
+          page={EditReviewPage}
+          name="editReview"
+        />
+        <Route path="/reviews/{id:Int}" page={ReviewPage} name="review" />
+        <Route path="/reviews" page={ReviewsPage} name="reviews" />
       </Private>
       <Route path="/contact" page={ContactPage} name="contact" />
       <Route path="/about" page={AboutPage} name="about" />
