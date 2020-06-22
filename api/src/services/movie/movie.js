@@ -24,5 +24,7 @@ export const getMovie = async () => {
   return {
     title: movie.title,
     poster_path: `http://image.tmdb.org/t/p/w154${movie.poster_path}`,
+    overview: movie.overview,
+    id: movie.id,
   }
 }
